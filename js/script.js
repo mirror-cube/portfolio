@@ -1,44 +1,60 @@
-const balls = [];
+let rects = []; 
+let numRects = 5; 
+let rectWidth = 50;
+let rectHeight = 50;
+let gravity = 0.1; 
+let colors; 
+let currentColors = []; 
 
 function setup() {
     const canvasParent = document.getElementById('canvas-parent');
     const canvasWidth = canvasParent.offsetWidth;
     const sketchCanvas = createCanvas(canvasWidth, 450);
     sketchCanvas.parent('canvas-parent');
+    
 
-    for (let i =0; i < 50; i++) {
-        const r = random(10, 30);
-        balls.push({
-            x: random(r, width - r), y: random(r, height - r),
-            sx: random(-2.0, 2.0), sy: random(-2.0, 2.0),
-            r: r,
-            c2: color(100, 200, 250, 150),
-            c1: color(250, 200, 100, 150),
+    for (let i = 0; i < numRects; i++) {
+        rects.push({
+            x: random(width),
+            y: random(-500, -50), 
+            velocity: 0,
+            color: random(colors),
+            hasBounced: false 
         });
+    }
+
+    colors = ['red', 'blue', 'green', 'white', 'yellow', 'orange'];
+
+    for (let i = 0; i < numRects; i++) {
+        currentColors.push(random(colors));
     }
 }
 
 function draw() {
-    background(200);
+    background(220);
+    
+    for (let i = 0; i < numRects; i++) {
+        //noStroke();
+        stroke(0, 20);
+        fill(currentColors[i]);
+        rect(rects[i].x, rects[i].y, rectWidth, rectHeight);
+        
+        
+        rects[i].velocity += gravity;
+        
+        rects[i].y += rects[i].velocity;
+        
+        
+        if (rects[i].y + rectHeight > height && !rects[i].hasBounced) {
+            rects[i].velocity *= -0.6; 
+            rects[i].hasBounced = true; 
+            rects[i].y = height - rectHeight;
 
-    for (let ball of balls) {
-        ball.x += ball.sx;
-        ball.y += ball.sy;
-        if (ball.r > ball.x || ball.x > width - ball.r) {
-            ball.sx *= -1.0;
-            ball.x = constrain(ball.x, ball.r, width - ball.r);
+        }else if(rects[i].y > height && rects[i].hasBounced){
+            rects[i].y = random(-500, -50); 
+            rects[i].x = random(width); 
+            currentColors[i] = random(colors);
+            rects[i].hasBounced = false;
         }
-        if (ball.r > ball.y || ball.y > height - ball.r) {
-            ball.sy *= -1.0;
-            ball.y = constrain(ball.y, ball.r, height - ball.r);
-        }
-
-        noStroke();
-        if (dist(mouseX, mouseY, ball.x, ball.y) < ball.r) {
-            fill(ball.c2);
-        } else {
-            fill(ball.c1);
-        }
-        ellipse(ball.x, ball.y, ball.r * 2, ball.r * 2);
     }
 }

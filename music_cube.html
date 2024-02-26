@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>video</title>
 </head>
+
 <body>
     <h2>
         DemoVideo
     </h2>
-    <video src="./assets/img/rubiksMovie.mov"
-    width="800" 
-    height="600"
-    controls>
-    </video>
-
-    <h3>
-        キャプション
-    </h3>    
-        <img src="./assets/img/Caption.png">
     
+    <style>
+        .image-container {
+            float: left;
+        }
+    </style>
+    <div class="image-container">
+        <video src="./assets/img/rubiksMovie.mov" width="800" height="600" controls>    
+    </div>
+    <div class="image-container">
+        <img src="./assets/img/Caption.png" alt="Image">
+    
+    </div>
+
+
+    <!-- <style>
+            .image-container {
+                float: left;
+            }
+        </style>
+        <div class="image-container">
+            <img src="./assets/img/Caption.png" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="./assets/img/Caption.png" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="./assets/img/Caption.png" alt="Image 3">
+        </div> -->
+
+        <style>
+        .image-container {
+            display: flex;
+        }
+    </style>
+    
+    <div class="image-container">
+        
+        <img src="./assets/img/IMG_6544.JPG" width="480" height="360" alt="Image 1">
+        <img src="./assets/img/IMG0.JPG"     width="480" height="360" alt="Image 2">
+        <img src="./assets/img/IMG1.jpg"     width="480" height="360" alt="Image 3">
+    </div>
+
+
+
 
 </body>
+
 </html>
