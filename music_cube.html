@@ -4,59 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>video</title>
+    <title>MusicCube</title>
+    <link rel="icon" href="favicon_2.ico">
+    <link href="./assets/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h2>
-        DemoVideo
-    </h2>
-    
-    <style>
-        .image-container {
-            float: left;
-        }
-    </style>
-    <div class="image-container">
-        <video src="./assets/img/rubiksMovie.mov" width="800" height="600" controls>    
-    </div>
-    <div class="image-container">
-        <img src="./assets/img/Caption.png" alt="Image">
-    
-    </div>
-
-
-    <!-- <style>
-            .image-container {
-                float: left;
-            }
-        </style>
-        <div class="image-container">
-            <img src="./assets/img/Caption.png" alt="Image 1">
+    <div class="container">
+        <div class="row">
+            <a href="../">TOP</a>
         </div>
-        <div class="image-container">
-            <img src="./assets/img/Caption.png" alt="Image 2">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h1>MusicCube</h1>
+            </div>
+            <div class="col-12  mb-5">
+                <h2>Overview</h2>
+                <div>この作品はハンガリーのプロモーションのために制作した。高い認知度を誇るルービックキューブがハンガリー発祥であることをきっかけに、色を揃えられる人が少ないことに目を付け、この作品を制作することにした。</div>
+            </div>
+            <div class="col-12 mb-5">
+                <h2>Technology</h2>
+                <ul>
+                    <li>Processing</li>
+                    <li>reacTIVision</li>
+                </ul>
+            </div>
         </div>
-        <div class="image-container">
-            <img src="./assets/img/Caption.png" alt="Image 3">
-        </div> -->
-
-        <style>
-        .image-container {
-            display: flex;
-        }
-    </style>
-    
-    <div class="image-container">
         
-        <img src="./assets/img/IMG_6544.JPG" width="480" height="360" alt="Image 1">
-        <img src="./assets/img/IMG0.JPG"     width="480" height="360" alt="Image 2">
-        <img src="./assets/img/IMG1.jpg"     width="480" height="360" alt="Image 3">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="ratio ratio-16x9">
+                    <video src="./assets/img/rubiksMovie.mov" controls></video> 
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Gallery</h2>
+            </div>
+            <div class="col-12 col-md-4 mb-5">
+                <figure class="figure">
+                    <img src="./assets/img/Caption.png" class="img-fluid figure-img" alt="Image">
+                    <figcaption class="figure-caption">展示の際に作成したキャプションボード</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-4">
+                <figure class="figure">
+                    <img src="./assets/img/IMG_6544.JPG" class="img-fluid" alt="Image 1">
+                    <figcaption class="figure-caption">展示会場の様子</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-4">
+                <figure class="figure">
+                    <img src="./assets/img/IMG0.JPG" class="img-fluid" alt="Image 2">
+                    <figcaption class="figure-caption">作品説明をしている様子</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-4">
+                <figure class="figure">
+                    <img src="./assets/img/IMG1.jpg" class="img-fluid" alt="Image 3">
+                    <figcaption class="figure-caption">作品を体験している様子</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-4">
+                <figure class="figure">
+                    <img src="./assets/img/PXL_20231207_103113972.jpg" class="img-fluid" alt="Image 4">
+                    <figcaption class="figure-caption">使用したルービックキューブ</figcaption>
+                </figure>
+            </div>
+        </div>
     </div>
 
-
-
-
+    <script src="./assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

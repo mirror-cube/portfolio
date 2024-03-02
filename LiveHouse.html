@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detail</title>
+    <title>LiveHouse</title>
+    <link rel="icon" href="favicon_2.ico">
+    <link href="./assets/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h2>
-        DemoVideo
-    </h2>
-    <video src="./assets/img/LiveHouseTelop.mov"
-    width="800" 
-    height="600"
-    controls>
-    </video>
-    <h3>
-        TeamLabの展示を見てどのような技術が使われ、どのような仕組みになるか分析した上で制作した作品。
-        <p>
+    <div class="container">
+        <div class="row">
+            <a href="../">TOP</a>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h1>LiveHouse</h1>
+            </div>
+            <div class="col-12  mb-5">
+                <h2>Overview</h2>
+                <div>TeamLabの展示を見てどのような技術が使われ、どのような仕組みになるか分析した上で制作した作品。</div>
+            </div>
+            <div class="col-12 mb-5">
+                <h2>Technology</h2>
+                <ul>
+                    <li>Processing</li>
+                    <li>Arduino</li>
+                    <li>Touch Frame</li>
+                </ul>
+            </div>
+        </div>
         
+        <div class="row mb-5 justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="ratio ratio-16x9">
+                    <video src="./assets/img/LiveHouseTelop.mov" controls></video> 
+                </div>
+            </div>
+        </div>
+
         <a class="" href="https://www.teamlab.art/jp/w/sketchsmarttown/" target="_blank">TeamLabの参考にした作品</a><br>
-        </p>
-    </h3>
-    
+
+        
+    </div>
+
+    <script src="./assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
